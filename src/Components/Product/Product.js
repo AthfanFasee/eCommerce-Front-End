@@ -4,9 +4,12 @@ import EditButton from '../EditButton/EditButton';
 import StarOutlineIcon from '@mui/icons-material/StarOutline';
 import StarIcon from '@mui/icons-material/Star';
 import './Product.css';
-
+import {useDispatch} from 'react-redux';
+import {likeProduct} from '../../api/ProductAPIs/LikeProduct';
+import {dislikeProduct} from '../../api/ProductAPIs/DisLikedProduct';
 
 function Product({product}) {
+  const dispatch = useDispatch();
 
   //to prevent bug which says array is not literable
 
@@ -16,17 +19,21 @@ function Product({product}) {
     isFavrtValue = false
   } else isFavrtValue = true;
 
-
+  //To live render product's favrt status
   const [isFavrt, setIsFavrt] = useState(isFavrtValue);
 
+  //this function is when the product is already a favrt one
   const starIconOnClick = () => {
+    dispatch(dislikeProduct({ProductID: product._id}))
     const Array = JSON.parse(localStorage.getItem("Liked"));
     const LikeRemovedArray = Array.filter(id => id !== product._id)
     localStorage.setItem("Liked", JSON.stringify(LikeRemovedArray))
     setIsFavrt(false) 
   }
 
+  //this function is to add a product as favrt
   const starOutlineIconOnClick = () => {
+    dispatch(likeProduct({ProductID: product._id}))
     setIsFavrt(true)
     const Array = JSON.parse(localStorage.getItem("Liked"));
     localStorage.setItem("Liked", JSON.stringify([...Array, product._id]))

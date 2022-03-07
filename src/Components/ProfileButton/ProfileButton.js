@@ -8,12 +8,12 @@ import Tooltip from '@mui/material/Tooltip';
 import LocalPostOfficeIcon from '@mui/icons-material/LocalPostOffice';
 import './ProfileButton.css';
 import { blue } from '@mui/material/colors';
-import { useNavigate } from "react-router-dom";
-
+import { useDispatch} from 'react-redux';
+import {updateIsLiked} from '../../features/isLiked';
 
 export default function ProfileButton() {
 
-  const Navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
@@ -82,7 +82,7 @@ export default function ProfileButton() {
        
 
 
-        <MenuItem onClick={() => Navigate("/favrt")} className="Menu">
+        <MenuItem onClick={() => dispatch(updateIsLiked("yes"))} className="Menu">
           <LocalPostOfficeIcon  className="PostsIcon" /> Favourite Products
         </MenuItem>
        

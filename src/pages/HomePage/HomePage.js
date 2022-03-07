@@ -7,6 +7,8 @@ import SearchResult from "../../Components/SearchResult/SearchResult";
 import './HomePage.css';
 import StarIcon from '@mui/icons-material/Star';
 import { useNavigate } from "react-router-dom";
+import {updateIsLiked} from '../../features/isLiked';
+
 
 function HomePage() {
 
@@ -15,12 +17,12 @@ function HomePage() {
 
   const Products = useSelector((state) => state.Products.value);
   const SearchInputValue = useSelector((state) => state.SearchInput.value);
+  const IsLiked = useSelector((state) => state.IsLiked.value);
 
-  const likedArray = JSON.parse(localStorage.getItem("Liked"))
-  console.log(likedArray);
+  //Rendering Product list from DB 
   useEffect(() => {
-    dispatch(getProducts({SearchInputValue}));
-}, [dispatch, SearchInputValue]);
+    dispatch(getProducts({SearchInputValue, IsLiked}));
+}, [dispatch, SearchInputValue, IsLiked]);
 
 
   return (
@@ -30,7 +32,7 @@ function HomePage() {
             <SearchBar />
             <div className="Button-Container">
               <button onClick={() => Navigate("/create")} className='NewProduct'>New Product</button>
-              <div onClick={() => Navigate("/favrt")} className='favrt'><StarIcon fontSize="large"  className='StarIcon'/></div>           
+              <div onClick={() => dispatch(updateIsLiked("yes"))} className='favrt'><StarIcon fontSize="large"  className='StarIcon'/></div>           
             </div>
         </div>
                 

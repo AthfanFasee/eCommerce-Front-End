@@ -192,5 +192,16 @@
 }
 
 .ImageDetails{
+    font-family: Satoshi;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 19px;
+
+    /* #162427 */
+
+    color: #162427;
+
+    opacity: 0.5;
     width: 200px;
 }

@@ -1,21 +1,20 @@
 import {createSlice} from '@reduxjs/toolkit';
-import {editProduct} from '../../api/EditProductAPI/Edit';
+import {dislikeProduct} from '../../api/ProductAPIs/DisLikedProduct';
 
 
 export const productSlice = createSlice({
     name: 'product',
     initialState : {value: {
-        editedProduct : {},
+        dislikedProduct : {},
         status: null,
     }},
     extraReducers: {
-       [editProduct.pending]: (state) => {
-           state.value.status = 'loading'         
+       [dislikeProduct.pending]: (state) => {
+           state.value.status = 'loading'                
        },
-       [editProduct.fulfilled]: (state, {payload}) => {
+       [dislikeProduct.fulfilled]: (state, {payload}) => {
             state.value.status = 'success'
             state.value.editedProduct = payload.data.product;
-            console.log(payload.data.product)
        },
     }
 })

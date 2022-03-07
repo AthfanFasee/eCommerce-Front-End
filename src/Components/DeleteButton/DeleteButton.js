@@ -9,18 +9,18 @@ import {useState} from 'react';
 import {deleteProduct} from '../../api/HomePageAPIs/Delete';
 import {getProducts} from '../../api/HomePageAPIs/Products';
 import './DeleteButton.css';
-import {useDispatch} from 'react-redux';
+import {useDispatch, useSelector} from 'react-redux';
 
 
 function DeleteButton({product}) {
 
   
-  const dispatch = useDispatch();
+    const dispatch = useDispatch();
 
     //for delete confirmation
     const [open, setOpen] = useState(false);
 
-    
+    const SearchInputValue = useSelector((state) => state.SearchInput.value);
   
     const handleClickOpen = () => {
         setOpen(true);
@@ -32,7 +32,7 @@ function DeleteButton({product}) {
 
       const confirmDelete = async () => {
         await dispatch(deleteProduct({ProductID: product._id}));
-        dispatch(getProducts());
+        dispatch(getProducts({SearchInputValue}));
         setOpen(false);
       }
 

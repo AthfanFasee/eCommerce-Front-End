@@ -6,6 +6,9 @@ import updateProductID from '../features/ProductID';
 import EditInputReducer from '../features/EditInputElements';
 import DeleteProductReducer from '../features/API_Reducers/deleteProduct';
 import SearchInputReducer from '../features/SearchInput';
+import LikeProductReducer from '../features/API_Reducers/likeProduct';
+import DislikeProductReducer from '../features/API_Reducers/disLikeProduct';
+import IsLikeReducer from '../features/isLiked';
 
 
 export const store = configureStore({
@@ -16,7 +19,10 @@ export const store = configureStore({
       ProductID: updateProductID,
       EditInputElements: EditInputReducer,
       deleteProduct: DeleteProductReducer,
-      SearchInput: SearchInputReducer
+      SearchInput: SearchInputReducer,
+      LikeProduct: LikeProductReducer,
+      DisLikeProduct: DislikeProductReducer,
+      IsLiked: IsLikeReducer
     },
     middleware: (getDefaultMiddleware) => getDefaultMiddleware(),
   });
