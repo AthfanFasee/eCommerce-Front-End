@@ -1,0 +1,38 @@
+.SearchMainContainer{
+    display: flex;
+    position: relative;
+    width: 757px;
+    margin-left: 50px;
+}
+
+.search-input {
+    
+    width: 757px;
+    height: 50px;
+    background: #F7F7F7;
+    border-radius: 50px;
+    border: none;
+}
+
+.SearchIconContainer{
+    background : #001EB9;
+    border-radius: 50px;
+    position: absolute;
+    top :5px;
+    right :5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    width: 100px;
+    height: 25px;
+}
+
+.searchText{
+    color: white;
+}
+
+.SearchIcon{
+    color: white;
+}

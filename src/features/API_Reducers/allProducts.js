@@ -6,7 +6,7 @@ export const productsSlice = createSlice({
     name: 'products',
     initialState : {value: {
         products: [],
-        noOfPages: 0,
+        noOfProducts: 0,
         status: null,
     }},
     extraReducers: {
@@ -15,7 +15,7 @@ export const productsSlice = createSlice({
        },
        [getProducts.fulfilled]: (state, {payload}) => {
            state.value.products = payload.data.products
-           state.value.noOfPages = payload.data.noOfPages
+           state.value.noOfProducts = payload.data.noOfProducts
            state.value.status = 'success'
        },
        [getProducts.rejected]: (state) => {

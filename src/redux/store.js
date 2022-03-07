@@ -5,6 +5,7 @@ import EditProductReducer from '../features/API_Reducers/editProduct';
 import updateProductID from '../features/ProductID';
 import EditInputReducer from '../features/EditInputElements';
 import DeleteProductReducer from '../features/API_Reducers/deleteProduct';
+import SearchInputReducer from '../features/SearchInput';
 
 
 export const store = configureStore({
@@ -14,7 +15,8 @@ export const store = configureStore({
       EditProduct: EditProductReducer,
       ProductID: updateProductID,
       EditInputElements: EditInputReducer,
-      deleteProduct: DeleteProductReducer
+      deleteProduct: DeleteProductReducer,
+      SearchInput: SearchInputReducer
     },
     middleware: (getDefaultMiddleware) => getDefaultMiddleware(),
   });

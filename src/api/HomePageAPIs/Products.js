@@ -7,8 +7,8 @@ const url = 'http://localhost:4000/api/v1/products';
 
 export const getProducts = createAsyncThunk(
     'Posts/getPosts',
-    async () => {
-        return await axios.get(url);
+    async ({SearchInputValue}) => {
+        return await axios.get(`${url}?name=${SearchInputValue}`);
         
     }
 )

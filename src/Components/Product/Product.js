@@ -1,18 +1,58 @@
-import React from 'react'
+import React, { useState } from 'react'
 import DeleteButton from '../DeleteButton/DeleteButton';
 import EditButton from '../EditButton/EditButton';
+import StarOutlineIcon from '@mui/icons-material/StarOutline';
+import StarIcon from '@mui/icons-material/Star';
+import './Product.css';
 
 
 function Product({product}) {
+
+  //to prevent bug which says array is not literable
+
+  const likedArray = JSON.parse(localStorage.getItem("Liked"));
+  let isFavrtValue = false;
+  if(!likedArray || !likedArray.includes(product._id)) {
+    isFavrtValue = false
+  } else isFavrtValue = true;
+
+
+  const [isFavrt, setIsFavrt] = useState(isFavrtValue);
+
+  const starIconOnClick = () => {
+    const Array = JSON.parse(localStorage.getItem("Liked"));
+    const LikeRemovedArray = Array.filter(id => id !== product._id)
+    localStorage.setItem("Liked", JSON.stringify(LikeRemovedArray))
+    setIsFavrt(false) 
+  }
+
+  const starOutlineIconOnClick = () => {
+    setIsFavrt(true)
+    const Array = JSON.parse(localStorage.getItem("Liked"));
+    localStorage.setItem("Liked", JSON.stringify([...Array, product._id]))
+  }
+   
+
   return (
     <div>
-        <div>
-            <p>{product.SKU}</p>
-            <p>Image</p>
-            <p>{product.name}</p>
-            <p>$24.00</p>
-            <DeleteButton product={product}/>
-            <EditButton product={product}/>
+        <div className="Product-Container">
+            <div className="Product">
+              <p className="SKU">{product.SKU}</p>
+              <p className="Image">Image</p>
+              <p className="Name">{product.name}</p>
+              <p className="Price">$24.00</p>
+              <div className="Icons">
+                  <div className="DeleteIcon">
+                      <DeleteButton  product={product}/>
+                  </div>
+                  <EditButton className="EditIcon" product={product}/>
+                  {isFavrt ? <StarIcon className="StarIcon"  onClick ={starIconOnClick} /> : <StarOutlineIcon className="StarIcon" onClick ={starOutlineIconOnClick}/>}            
+              </div>
+              
+            </div>
+            
+            
+            
             
         </div>
     </div>

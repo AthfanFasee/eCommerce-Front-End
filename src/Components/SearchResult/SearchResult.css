@@ -1,0 +1,83 @@
+.Result-Text{
+    position: fixed;
+    width: 342px;
+    height: 32px;
+    left: 83px;
+    top: 218px;
+
+    /* sec-titles */
+
+    font-family: Satoshi;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: 0.08em;
+
+    /* #162427 */
+
+    color: #162427;
+
+    opacity: 0.5;
+}
+
+.ProductsSearchContainer{
+    margin-left : 120px;
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+}
+.SearchSKU{
+    margin: 5px 0 5px 0;
+    font-family: Satoshi;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 19px;
+    /* identical to box height */
+
+
+    /* #001EB9 */
+
+    color: #001EB9;
+}
+
+.SearchName{
+    margin: 5px 0 5px 0;
+    width: 128px;
+    height: 26px;
+    left: 0px;
+    top: 29px;
+
+    /* primary-text/bold */
+
+    font-family: Satoshi;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 19px;
+    line-height: 26px;
+    /* identical to box height */
+
+
+    /* #162427 */
+
+    color: #162427;
+}
+
+.SearchDescription{
+    margin: 5px 0 5px 0;
+    font-family: Satoshi;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 19px;
+    /* identical to box height */
+
+
+    /* #162427 */
+
+    color: #162427;
+
+    opacity: 0.5;
+}
+

@@ -8,7 +8,7 @@ import DialogTitle from '@mui/material/DialogTitle';
 import {useState} from 'react';
 import {deleteProduct} from '../../api/HomePageAPIs/Delete';
 import {getProducts} from '../../api/HomePageAPIs/Products';
-
+import './DeleteButton.css';
 import {useDispatch} from 'react-redux';
 
 
@@ -42,7 +42,7 @@ function DeleteButton({product}) {
         <div className="deletediv">
 
             {/* Delete Confirmation */} 
-             <DeleteIcon variant="outlined" data-testid="deleteIcon" onClick={handleClickOpen}></DeleteIcon>
+             <DeleteIcon className="deleteIcon" variant="outlined" onClick={handleClickOpen}></DeleteIcon>
                 <Dialog
                     open={open}
                     onClose={handleClose}

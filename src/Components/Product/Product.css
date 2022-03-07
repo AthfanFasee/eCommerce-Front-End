@@ -1,0 +1,24 @@
+
+.Product{
+
+    display: flex;
+    justify-content: space-between;
+    margin-left: 40px;
+}
+
+.SKU{
+    margin-left: 60px;
+
+}
+.Price{
+    margin-right: 100px;
+}
+
+.Icons{
+    display: flex;
+}
+
+
+.StarIcon{
+    color: blue;
+}

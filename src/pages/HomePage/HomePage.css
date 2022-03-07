@@ -1,0 +1,70 @@
+.Main-Heading{
+    margin-top: 100px;
+    margin-left: 50px;
+    width: 241px;
+    height: 49px;
+    left: 83px;
+    top: 50px;
+
+    /* primary-titles */
+
+    font-family: Satoshi;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 49px;
+    /* identical to box height */
+
+    letter-spacing: 0.15em;
+
+    /* #162427 */
+
+    color: #162427;
+}
+
+.SubHeadings{
+    display: flex;
+    color: blue;
+    justify-content: space-between;
+    margin-left: 40px;
+    
+}
+
+.SearchBarAndButtonsContainer{
+    display: flex;
+    justify-content: space-between;
+}
+
+.NewProduct{
+    width: 180px;
+    padding: 15px;
+    height: 47px;
+    border-radius: 10px;
+    color: rgb(248, 248, 255);
+    background-color: #001EB9;
+    border: none;
+    text-decoration: none;
+}
+.favrt{
+    
+    width: 40px;
+    padding: 10px;
+    height: 47px;
+    border-radius: 10px;
+    background-color: #fafafa;
+    border: blue;
+    text-decoration: none;
+}
+
+
+
+.SKU-Heading{
+    margin-left: 60px;
+}
+
+.Price-Heading{
+    margin-right: 400px;
+}
+
+
+

@@ -1,6 +1,6 @@
 import {BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom';
 import CreateProduct from './pages/CreateProduct';
-import HomePage from './pages/HomePage';
+import HomePage from './pages/HomePage/HomePage';
 import EditProduct from './pages/EditProduct';
 import Favorites from './pages/Favourites';
 import {HomePageProvider} from './helper/HomePageProvider';
@@ -11,19 +11,18 @@ import ProfileButton from './Components/ProfileButton/ProfileButton';
 
 
 
-
 function App() {
  
   return (
     <Router>
       <nav>
-      <Link to='/'>Home</Link>
-        <Link to='/create'>New Product</Link>   
-        <Link to='/edit'>Edit</Link> 
+      <Link to='/'></Link>
+        <Link to='/create'></Link>   
+        <Link to='/edit'></Link> 
          <div className='ProfileButton'>
           <ProfileButton />
          </div>
-         <Link to='/favrt'>favrt</Link>
+         <Link to='/favrt'></Link>
       
          
       </nav>
