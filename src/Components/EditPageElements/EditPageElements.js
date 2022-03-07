@@ -7,7 +7,7 @@ function EditPageElements({EditProductButtonClick}) {
 
     const dispatch = useDispatch();
     const ProductID = useSelector((state) => state.ProductID.value);
-    const EditInput = useSelector((state) => state.EditInputElements.value)
+    const EditInput = useSelector((state) => state.EditInputElements.value);
     
 
     return (

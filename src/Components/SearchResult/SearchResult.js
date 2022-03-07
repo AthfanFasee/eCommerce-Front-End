@@ -18,4 +18,4 @@ function SearchResult({product, noOfProducts}) {
   )
 }
 
-export default SearchResult
+export default SearchResult;

@@ -11,8 +11,7 @@ import {dislikeProduct} from '../../api/ProductAPIs/DisLikedProduct';
 function Product({product}) {
   const dispatch = useDispatch();
 
-  //to prevent bug which says array is not literable
-
+  //to prevent bug which stats as 'array is not literable'
   const likedArray = JSON.parse(localStorage.getItem("Liked"));
   let isFavrtValue = false;
   if(!likedArray || !likedArray.includes(product._id)) {
@@ -24,19 +23,19 @@ function Product({product}) {
 
   //this function is when the product is already a favrt one
   const starIconOnClick = () => {
-    dispatch(dislikeProduct({ProductID: product._id}))
+    dispatch(dislikeProduct({ProductID: product._id}));
     const Array = JSON.parse(localStorage.getItem("Liked"));
-    const LikeRemovedArray = Array.filter(id => id !== product._id)
-    localStorage.setItem("Liked", JSON.stringify(LikeRemovedArray))
-    setIsFavrt(false) 
+    const LikeRemovedArray = Array.filter(id => id !== product._id);
+    localStorage.setItem("Liked", JSON.stringify(LikeRemovedArray));
+    setIsFavrt(false); 
   }
 
   //this function is to add a product as favrt
   const starOutlineIconOnClick = () => {
-    dispatch(likeProduct({ProductID: product._id}))
-    setIsFavrt(true)
+    dispatch(likeProduct({ProductID: product._id}));
+    setIsFavrt(true);
     const Array = JSON.parse(localStorage.getItem("Liked"));
-    localStorage.setItem("Liked", JSON.stringify([...Array, product._id]))
+    localStorage.setItem("Liked", JSON.stringify([...Array, product._id]));
   }
    
 
@@ -61,4 +60,4 @@ function Product({product}) {
   )
 }
 
-export default Product
+export default Product;

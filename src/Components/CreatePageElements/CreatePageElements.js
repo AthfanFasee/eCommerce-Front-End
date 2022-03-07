@@ -6,7 +6,7 @@ import './CreatePageElements.css';
 function CreatePageElements({CreateProductButtonClick}) {
 
     const { SKU, setSKU, name, setName, description, setDescription,Quantity, setQuantity} =
-    useContext(CreatePageContext) 
+    useContext(CreatePageContext);
 
     return (
         <div>

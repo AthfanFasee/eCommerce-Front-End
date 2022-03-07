@@ -9,7 +9,7 @@ function SearchBar() {
   const dispatch = useDispatch();
 
   const handleChange = (event) => {
-    dispatch(UpdateSearchInput(event.target.value))
+    dispatch(UpdateSearchInput(event.target.value));
     dispatch(updateIsLiked("")); //Making sure Search functionality works properly after user requested for favrt products
   }
 
@@ -25,4 +25,4 @@ function SearchBar() {
   )
 }
 
-export default SearchBar
+export default SearchBar;
