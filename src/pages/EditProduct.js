@@ -17,7 +17,7 @@ function EditProduct() {
 
     const EditProductButtonClick = async (ProductID) => {
         await dispatch(editProduct({ProductID, EditInputValues}));    
-         
+        navigate("/") 
     }
 
     
