@@ -44,7 +44,7 @@ function Product({product}) {
     <div>
             <div className="ProductMainContainer">
               <div className="Product">
-              <p className="Title">{product.SKU}</p>
+              <p className="SKU">{product.SKU}</p>
               <p className="Title">Image</p>
               <p className="Title">{product.name}</p>
               <p className="Price">$24.00</p>

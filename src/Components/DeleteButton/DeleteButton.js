@@ -50,20 +50,20 @@ function DeleteButton({product}) {
                     aria-describedby="alert-dialog-description">
 
                     <DialogTitle id="alert-dialog-title">
-                    {"Are you sure you want to delete this post?"}
+                    {"ARE YOU SURE?"}
                     </DialogTitle>
 
                     <DialogContent>
                     <DialogContentText id="alert-dialog-description">
-                        Note That Once Deleted, This Post cannot be RESTORED!!!
+                      You will not be able to undo this action if you proceed!
                     </DialogContentText>
                     </DialogContent>
 
                     <DialogActions>
-                    <Button onClick={handleClose}>Close</Button>
+                    <Button onClick={handleClose}>Cancel</Button>
 
                     <Button onClick={confirmDelete} autoFocus>
-                        Confirm
+                        Delete
                     </Button>
 
                     </DialogActions>

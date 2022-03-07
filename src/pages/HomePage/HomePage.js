@@ -27,7 +27,7 @@ function HomePage() {
 
   return (
     <div>
-        <h1 className="Main-Heading">PRODUCTS</h1>
+        {IsLiked !== 'yes' ?<h1 className="Main-Heading">PRODUCTS</h1> : <h1 className="Main-Heading">FAVOURITE PRODUCTS</h1>}
         <div className="SearchBarAndButtonsContainer">
             <SearchBar />
             <div className="Button-Container">

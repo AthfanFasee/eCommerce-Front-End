@@ -24,6 +24,21 @@
 .Title{
     max-width: 52px;
 }
+.SKU {
+    font-family: Satoshi;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 19px;
+    line-height: 26px;
+    /* identical to box height */
+
+
+    /* #162427 */
+
+    color: #162427;
+
+    opacity: 0.5;
+}
 .Price{
     max-width: 52px;
 }
