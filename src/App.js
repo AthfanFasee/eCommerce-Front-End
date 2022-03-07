@@ -6,7 +6,7 @@ import Favorites from './pages/Favourites';
 import {HomePageProvider} from './helper/HomePageProvider';
 import {CreatePageProvider} from './helper/CreatePageProvider';
 import ProfileButton from './Components/ProfileButton/ProfileButton';
-
+import './App.css';
 
 
 
@@ -20,6 +20,7 @@ function App() {
         <Link to='/create'></Link>   
         <Link to='/edit'></Link> 
          <div className='ProfileButton'>
+           <p className='AdminText'>Admin</p>
           <ProfileButton />
          </div>
          <Link to='/favrt'></Link>

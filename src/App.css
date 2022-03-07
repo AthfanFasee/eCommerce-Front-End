@@ -1,0 +1,18 @@
+.ProfileButton{
+    display: flex;
+    align-items: center;
+}
+.AdminText{
+    font-family: Satoshi;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 19px;
+    line-height: 26px;
+    /* identical to box height */
+
+
+    /* #162427 */
+
+    color: #162427;
+
+}

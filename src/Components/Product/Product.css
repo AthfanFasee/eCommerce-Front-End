@@ -1,21 +1,38 @@
 
-.Product{
 
+.ProductMainContainer{
+    margin-left: 121px;
+    margin-right: 121px;
     display: flex;
+    align-items: center;
     justify-content: space-between;
     margin-left: 40px;
+    width: 1198px;
+    border-bottom: 1px solid #969191;
+
+
+
+
+}
+.Product{
+    margin-left: 60px;
+    width: 1000px;
+    display: flex;
+    justify-content: space-between;
 }
 
-.SKU{
-    margin-left: 60px;
-
+.Title{
+    max-width: 52px;
 }
 .Price{
-    margin-right: 100px;
+    max-width: 52px;
 }
+
 
 .Icons{
     display: flex;
+    justify-content: space-between;
+    width: 100px;
 }
 
 

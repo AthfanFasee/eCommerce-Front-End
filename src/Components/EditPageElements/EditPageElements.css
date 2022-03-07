@@ -1,0 +1,196 @@
+.Headings{
+    display: flex;
+    align-items: center;
+}
+.MainHead{
+    margin-top: 100px;
+    margin-left: 50px;
+    height: 49px;
+    left: 83px;
+    top: 50px;
+
+    /* primary-titles */
+
+    font-family: Satoshi;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 49px;
+    /* identical to box height */
+
+    letter-spacing: 0.15em;
+
+    /* #162427 */
+
+    color: #162427;
+}
+.SubHead{
+    margin-top: 100px;
+    height: 32px;
+    left: 489px;
+    top: 155px;
+    margin-left: 40px;
+
+    /* sec-titles */
+
+    font-family: Satoshi;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: 0.08em;
+
+    /* #001EB9 */
+
+    color: #001EB9;
+}
+
+.SKUContainer{
+    display: flex;
+
+}
+.NamendQTYContainer{
+    display: flex;
+}
+.Label{
+   
+    margin-right: 40px;
+    height: 26px;
+    /* primary-text/med */
+
+    font-family: Satoshi;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 19px;
+    line-height: 26px;
+    /* identical to box height */
+
+
+    /* #162427 */
+
+    color: #162427;
+
+}
+
+.Input{
+    width: 300px;
+    height: 35px;
+    left: 262px;
+    top: 235px;
+    
+    /* #F7F7F7 */
+    
+    background: #F7F7F7;
+    border-radius: 5px;
+    border: none;
+
+}
+
+.Container{
+    margin-left: 100px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.DescribeContainer{
+    margin-left: 100px;
+    display: flex;
+    flex-direction: column;
+
+}
+.TextArea{
+    
+    border: none;
+
+    /* #F7F7F7 */
+
+    background: #F7F7F7;
+    border-radius: 5px;
+}
+.ImageHead{
+    margin-left: 100px;
+    display: flex;
+    flex-direction: column;
+}
+.title{
+    height: 26px;
+    margin-right: 50px;
+
+    /* primary-text/med */
+
+    font-family: Satoshi;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 19px;
+    line-height: 26px;
+    /* identical to box height */
+
+
+    /* #162427 */
+
+    color: #162427;
+
+}
+.para{
+    height: 38px;
+
+    /* sec-text/med */
+
+    font-family: Satoshi;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 19px;
+
+    /* #162427 */
+
+    color: #162427;
+
+    opacity: 0.5;
+}
+.titlendInput{
+    display: flex;
+    align-items: center;
+}
+
+.input{
+    
+    height: 22px;
+    border: none;
+    text-decoration: none;
+
+    /* primary-text/med */
+
+    font-family: Satoshi;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 26px;
+    /* identical to box height */
+
+
+    /* #001EB9 */
+
+    color: #001EB9;
+}
+
+.AddButton {
+    position: fixed;
+    width: 149px;
+    height: 46px;
+    bottom: 20px;
+    right: 20px;
+
+    /* #001EB9 */
+
+    background: #001EB9;
+    /* btn-shadow orange */
+
+    box-shadow: 4px 4px 30px rgba(243, 172, 22, 0.2);
+    border-radius: 10px;
+    color: white;
+}
+
+.ImageDetails{
+    width: 200px;
+}

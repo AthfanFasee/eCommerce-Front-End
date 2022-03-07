@@ -1,6 +1,6 @@
 .Result-Text{
     position: fixed;
-    width: 342px;
+    width: 642px;
     height: 32px;
     left: 83px;
     top: 218px;
@@ -79,5 +79,11 @@
     color: #162427;
 
     opacity: 0.5;
+    width: 1089px;
+    height: 0px;
+
+
+
+    border-bottom: 1px solid #969191;
 }
 

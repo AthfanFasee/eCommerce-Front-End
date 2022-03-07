@@ -7,10 +7,13 @@ import IconButton from '@mui/material/IconButton';
 import Tooltip from '@mui/material/Tooltip';
 import LocalPostOfficeIcon from '@mui/icons-material/LocalPostOffice';
 import './ProfileButton.css';
+import { blue } from '@mui/material/colors';
+import { useNavigate } from "react-router-dom";
+
 
 export default function ProfileButton() {
 
-
+  const Navigate = useNavigate();
 
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
@@ -29,13 +32,14 @@ export default function ProfileButton() {
           <IconButton
             className="IconButton"
             onClick={handleClick}
-            size="small"
-            sx={{ ml: 2 }}
+            size="large"
+
+            sx={{ ml: 2 ,  color: blue[900]}}
             aria-controls={open ? 'account-menu' : undefined}
             aria-haspopup="true"
             aria-expanded={open ? 'true' : undefined}
           >
-            <Avatar  sx={{ width: 50, height: 50 }}></Avatar>
+            <Avatar  sx={{bgcolor: blue[900], width: 50, height: 50 }}></Avatar>
           </IconButton>
         </Tooltip>
       </Box>
@@ -48,6 +52,7 @@ export default function ProfileButton() {
         PaperProps={{
           elevation: 0,
           sx: {
+            bgcolor: blue[900],
             overflow: 'visible',
             filter: 'drop-shadow(0px 2px 8px rgba(0,0,0,0.32))',
             mt: 1.5,
@@ -77,8 +82,8 @@ export default function ProfileButton() {
        
 
 
-        <MenuItem className="Menu">
-          <LocalPostOfficeIcon className="PostsIcon" /> My Posts
+        <MenuItem onClick={() => Navigate("/favrt")} className="Menu">
+          <LocalPostOfficeIcon  className="PostsIcon" /> Favourite Products
         </MenuItem>
        
       </Menu>

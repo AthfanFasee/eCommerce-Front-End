@@ -24,15 +24,32 @@
 
 .SubHeadings{
     display: flex;
-    color: blue;
     justify-content: space-between;
     margin-left: 40px;
+    height: 26px;
+    font-family: Satoshi;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 19px;
+    line-height: 26px;
+    /* identical to box height */
+
+
+    /* #001EB9 */
+
+    color: #001EB9;
     
 }
 
 .SearchBarAndButtonsContainer{
     display: flex;
     justify-content: space-between;
+    align-items: center;
+}
+.Button-Container{
+    margin-right: 40px;
+    display: flex;
+    align-items: center;
 }
 
 .NewProduct{
@@ -44,6 +61,7 @@
     background-color: #001EB9;
     border: none;
     text-decoration: none;
+    cursor: pointer;
 }
 .favrt{
     
@@ -54,6 +72,7 @@
     background-color: #fafafa;
     border: blue;
     text-decoration: none;
+    cursor: pointer;
 }
 
 
@@ -66,5 +85,11 @@
     margin-right: 400px;
 }
 
+.AllProductsContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 
 

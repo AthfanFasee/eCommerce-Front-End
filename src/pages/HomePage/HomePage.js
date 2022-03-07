@@ -28,9 +28,10 @@ function HomePage() {
         <h1 className="Main-Heading">PRODUCTS</h1>
         <div className="SearchBarAndButtonsContainer">
             <SearchBar />
-            <div className="Button-Container"></div>
-            <button onClick={() => Navigate("/create")} className='NewProduct'>New Product</button>
-            <div onClick={() => Navigate("/favrt")} className='favrt'><StarIcon className='StarIcon'/></div>
+            <div className="Button-Container">
+              <button onClick={() => Navigate("/create")} className='NewProduct'>New Product</button>
+              <div onClick={() => Navigate("/favrt")} className='favrt'><StarIcon fontSize="large"  className='StarIcon'/></div>           
+            </div>
         </div>
                 
         {!SearchInputValue.length > 0 && 

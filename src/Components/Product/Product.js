@@ -35,26 +35,21 @@ function Product({product}) {
 
   return (
     <div>
-        <div className="Product-Container">
-            <div className="Product">
-              <p className="SKU">{product.SKU}</p>
-              <p className="Image">Image</p>
-              <p className="Name">{product.name}</p>
+            <div className="ProductMainContainer">
+              <div className="Product">
+              <p className="Title">{product.SKU}</p>
+              <p className="Title">Image</p>
+              <p className="Title">{product.name}</p>
               <p className="Price">$24.00</p>
+              </div>
               <div className="Icons">
                   <div className="DeleteIcon">
                       <DeleteButton  product={product}/>
                   </div>
                   <EditButton className="EditIcon" product={product}/>
                   {isFavrt ? <StarIcon className="StarIcon"  onClick ={starIconOnClick} /> : <StarOutlineIcon className="StarIcon" onClick ={starOutlineIconOnClick}/>}            
-              </div>
-              
+              </div>             
             </div>
-            
-            
-            
-            
-        </div>
     </div>
   )
 }
