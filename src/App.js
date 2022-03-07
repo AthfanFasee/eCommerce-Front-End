@@ -15,13 +15,13 @@ function App() {
   return (
     <Router>
       <nav>
-      <Link to='/'></Link>
-        <Link to='/create'></Link>   
-        <Link to='/edit'></Link> 
-         <div className='ProfileButton'>
-           <p className='AdminText'>Admin</p>
-          <ProfileButton />
-         </div>      
+          <Link to='/'></Link>
+          <Link to='/create'></Link>   
+          <Link to='/edit'></Link> 
+          <div className='ProfileButton'>
+              <p className='AdminText'>Admin</p>
+              <ProfileButton />
+          </div>      
       </nav>
       
       <Routes>
