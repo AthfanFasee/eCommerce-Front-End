@@ -9,16 +9,15 @@ import CreatePageElements from '../Components/CreatePageElements/CreatePageEleme
 
 function CreateProduct() {
 
-    const {setError, SKU, name, description, Quantity } =
+    const {setError} =
     useContext(CreatePageContext)
 
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
-    const CreateProductButtonClick = async () => {
-        console.log('bew')
+    const CreateProductButtonClick = async (data , config) => {
         try{
-            await dispatch(createProduct({SKU, name, description, Quantity}));    
+            await dispatch(createProduct(data, config));    
             navigate("/")
          
         } catch(err){

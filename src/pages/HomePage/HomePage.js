@@ -10,6 +10,7 @@ import { useNavigate } from "react-router-dom";
 import {updateIsLiked} from '../../features/isLiked';
 
 
+
 function HomePage() {
 
   const dispatch = useDispatch();
@@ -29,6 +30,7 @@ function HomePage() {
     <div>
         {IsLiked !== 'yes' ?<h1 className="Main-Heading">PRODUCTS</h1> : <h1 className="Main-Heading">FAVOURITE PRODUCTS</h1>}
         <div className="SearchBarAndButtonsContainer">
+         
             <SearchBar />
             <div className="Button-Container">
               <button onClick={() => Navigate("/create")} className='NewProduct'>New Product</button>

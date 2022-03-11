@@ -6,19 +6,18 @@ export const CreatePageContext = createContext(null)
 export function CreatePageProvider({children}) {
 
     //to save input elements' value
-    const [SKU, setSKU] = useState("");
-    const [name, setName] = useState("");
-    const [description, setDescription] = useState("");
-    const [Quantity, setQuantity] = useState("");
+    const [createFormData, setCreateFormData] = useState({
+        SKU: "", name: "", description: "", Quantity: 0, images: {}
+    });
 
-
+    
 
      //to catch errors
      const [error, setError] = useState("");
 
 
     return (
-        <CreatePageContext.Provider value={{setError, error, SKU, setSKU, name, setName, description, setDescription, Quantity, setQuantity}}>
+        <CreatePageContext.Provider value={{setError, error, createFormData, setCreateFormData}}>
             {children}
         </CreatePageContext.Provider>
     )

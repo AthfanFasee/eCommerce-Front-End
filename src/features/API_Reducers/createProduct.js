@@ -10,11 +10,13 @@ export const productSlice = createSlice({
     extraReducers: {
        [createProduct.pending]: (state) => {
            state.value.status = 'loading'
+           console.log(state.value.status)
         
        },
-       [createProduct.fulfilled]: (state) => {
+       [createProduct.fulfilled]: (state, {payload}) => {
            state.value.status = 'success'
-          
+           console.log(state.value.status)
+           console.log(payload.data)
        },
     }
 })

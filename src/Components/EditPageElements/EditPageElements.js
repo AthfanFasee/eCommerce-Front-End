@@ -18,7 +18,7 @@ function EditPageElements({EditProductButtonClick}) {
             </div>    
                 <div className="Container">
                     <label className="Label">SKU</label>
-                    <input className="Input" value={EditInput.SKU} onChange={(event) => dispatch(EditInputValue({...EditInput, SKU: event.target.value}))}/>
+                    <input className="Input" value={EditInput.SKU} onChange={(event) => dispatch(EditInputValue({...EditInput, SKU: event.target.value}))} />
                 </div>
                 <div className="Container">
                     <label className="Label">Name</label>
